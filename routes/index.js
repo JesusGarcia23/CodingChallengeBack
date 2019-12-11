@@ -18,7 +18,7 @@ html, css, workingTeam, selfMotivation, communicationSkills, ownEnergyLvl, intAp
     fulWorkUnderstanding, testing, databaseKnowledge, debugging, probSolvingSkills, javascript,
     html, css, workingTeam, selfMotivation, communicationSkills, ownEnergyLvl, intAptitude
   }).then(newApplicant => {
-    console.log("NEW APPLICANT")
+    res.json(newApplicant)
   }).catch(err => {
     console.log(err)
   })
