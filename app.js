@@ -3,6 +3,7 @@ var cookieParser = require('cookie-parser');
 let cors = require('cors')
 const logger = require('morgan')
 const bodyParser   = require('body-parser');
+const path         = require('path');
 const dotenv = require('dotenv').config();
 
 var indexRouter = require('./routes/index');
@@ -15,6 +16,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use(cors({
   origin:[process.env.HEROKU]

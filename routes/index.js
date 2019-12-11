@@ -3,9 +3,9 @@ var router = express.Router();
 let Applicant = require('../models/Applicant')
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index');
-// });
+router.get('/', function(req, res, next) {
+  res.render('index');
+});
 
 router.post('/submitForm', (req, res, next) => {
   const {fullName, email, projectRepo, projectUrl, bestpracticeOOP, modularDevelopment,
