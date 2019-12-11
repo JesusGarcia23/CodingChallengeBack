@@ -4,7 +4,7 @@ let cors = require('cors')
 const logger = require('morgan')
 const bodyParser   = require('body-parser');
 const path         = require('path');
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 
