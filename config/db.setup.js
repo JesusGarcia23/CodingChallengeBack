@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('', {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
 .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
 })
