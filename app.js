@@ -1,9 +1,9 @@
 var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
 let cors = require('cors')
 const logger = require('morgan')
 const bodyParser   = require('body-parser');
+const dotenv = require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 
